@@ -16,10 +16,13 @@
 </ul>
 {%- endif -%}
 <div class="content">
+    <!-- todo add support for my links-->
     {%- if site.preferences.wiki_style_link.enabled -%}
         {%- assign content_array = content | split:'[[' -%}
         {%- assign external_link_delimiter = '::' -%}
-
+        ---
+        {{ site.posts | jsonify }}
+        ---
         {%- assign link_joiner_delimiter = '$@' -%}
         {%- for item in content_array -%}
             {%- if forloop.index > 1 -%}
@@ -29,6 +32,7 @@
                 {%- assign sidenote = itemparts[0] | split:sidenote_delimiter -%}
             
                 {%- if external_link[1] == nil -%}
+                <!-- todo -->
                     {%- assign result_posts = site.posts | where: 'title',itemparts[0] -%}
                     {%- assign result_pages = site.pages | where: 'title',itemparts[0] -%}
                     {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
