@@ -80,7 +80,6 @@ user:
 # context menu, flashcards, sliding window, wrapping
 #####################################################################
 preferences:
-  article_type_notes: true # notes vs post
   search:
     enabled: true
     shortcut_hint: 
