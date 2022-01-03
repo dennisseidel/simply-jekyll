@@ -1,4 +1,4 @@
 ---
-layout: Post
+layout: Note
 permalink: /notes
 ---

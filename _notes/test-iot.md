@@ -10,4 +10,8 @@ TARGET DECK: iot
 ![](../assets/files/dummyimage.png)
 
 
+```bash
+cd /test/test
+```
+
 ## Footnotes & Resources

@@ -14,15 +14,27 @@
         {%- endif -%}
     {%- endfor -%}
 </ul>
+{% elsif page.content-type == "notes" -%}
+<ul class="tags">
+    {%- if page.status != nil and page.status != empty -%}
+        <li><a href="javascript:void(0)" class="tag"><b>Status:</b> <i>{{page.status | capitalize}}</i></a></li>
+    {%- endif -%}
+    <!-- Loop through page categories and print them in tags -->
+    {%- if page.tags != empty and page.tags !=nil -%}
+    {%- for tag in page.tags -%}
+    <li><a href="/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
+    {%- endfor -%}
+    {%- endif -%}
+</ul>
+<!-- include toc.html -%} TODO: enable toc for post-->
 {%- endif -%}
+
+
 <div class="content">
     <!-- todo add support for my links-->
     {%- if site.preferences.wiki_style_link.enabled -%}
         {%- assign content_array = content | split:'[[' -%}
         {%- assign external_link_delimiter = '::' -%}
-        ---
-        {{ site.posts | jsonify }}
-        ---
         {%- assign link_joiner_delimiter = '$@' -%}
         {%- for item in content_array -%}
             {%- if forloop.index > 1 -%}
@@ -32,8 +44,13 @@
                 {%- assign sidenote = itemparts[0] | split:sidenote_delimiter -%}
             
                 {%- if external_link[1] == nil -%}
-                <!-- todo -->
-                    {%- assign result_posts = site.posts | where: 'title',itemparts[0] -%}
+<!-- todo add a new config attribute site.preferences.wiki_style_link.match_id -->
+                    {%- if site.preferences.wiki_style_link.match_id -%}
+                        {%- assign linked_note_id = "/" | append: page.content-type | append: "/" | append:  itemparts[0] -%}
+                        {%- assign result_posts = site.notes | where: 'id', linked_note_id -%}
+                    {%- else -%} 
+                        {%- assign result_posts = site.posts | where: 'title',itemparts[0] -%}
+                    {%- endif -%}
                     {%- assign result_pages = site.pages | where: 'title',itemparts[0] -%}
                     {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
                     {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_posts[0].url | append: result_pages[0].url -%}
@@ -59,8 +76,18 @@
             {%- elsif url == empty -%}
                 {%- assign link_text = '<a class="stale-link" href="' | append: 'javascript:void(0)' | append: '">' | append: title | append: '</a>' -%}
             {%- else -%}
-                    {%- assign post = site.posts | where: 'title',title -%}
-                    {%- assign excerpt = post[0].content | markdownify | strip_html | truncate: 200 | newline_to_br -%}
+                    <!-- todo select correct tooltip-->
+                    {%- if page.content-type == "notes" -%}
+                        {%- if site.preferences.wiki_style_link.match_id -%}
+                            {%- assign new_note_id = "/" | append: page.content-type | append: "/" | append:  itemparts[0] -%}
+                            {%- assign post = site.notes | where: 'id', "/notes/setup your work environment" -%} 
+                        {%- else -%} 
+                            {%- assign post = site.notes | where: 'title',title -%}
+                        {%- endif -%}
+                    {%- else -%}
+                        {%- assign post = site.posts | where: 'title',title -%}
+                    {%- endif -%}
+                        {%- assign excerpt = post[0].content | markdownify | strip_html | truncate: 200 | newline_to_br -%}
                     {%- if site.preferences.pagepreview.enabled -%}
                         {%- assign link_text = '<span class="tooltip"><a href="' | append: url | append: '">' | append: title | append: '</a><span class="right bottom"><span class="tooltip-title">' | append: title | append: '</span><br/><span class="tooltip-excerpt">' | append: excerpt | append: '</span><i></i></span></span>' -%}
                     {%- else -%}

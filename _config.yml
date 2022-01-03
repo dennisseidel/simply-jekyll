@@ -80,13 +80,14 @@ user:
 # context menu, flashcards, sliding window, wrapping
 #####################################################################
 preferences:
+  article_type_notes: true # notes vs post
   search:
     enabled: true
     shortcut_hint: 
         enabled: true
   wiki_style_link: # This property handles wiki style links '[['
     enabled: true
-    match_id: true
+    match_id: true # instead of matching on title, use id / file name to match
   sidenotes: 
     enabled: true
   transclusion:
