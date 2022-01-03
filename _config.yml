@@ -86,6 +86,7 @@ preferences:
         enabled: true
   wiki_style_link: # This property handles wiki style links '[['
     enabled: true
+    match_id: true
   sidenotes: 
     enabled: true
   transclusion:
@@ -146,14 +147,24 @@ sass:
   style: compressed
 
 defaults:
+  # - scope:
+  #     path: ""
+  #     type: posts
+  #   values:
+  #     layout: Post
+  #     permalink: /posts/:title
+  #     content-type: post
   - scope:
       path: ""
-      type: posts
+      type: notes
     values:
-      layout: Post
-      permalink: /posts/:title
-      content-type: post
+      layout: Note
+      content-type: notes
 
+collections:   # from notenote.link
+    notes:
+      output: true
+      permalink: /notes/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default.
