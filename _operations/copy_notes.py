@@ -54,7 +54,6 @@ def copy_notes_and_linked_assets(vault_path: str, metadata_list: dict, destinati
         filename = note_entry.get("relativePath").split('/')[-1]
         embedded_files_in_note = copy_file_and_return_embedded_filenames(source_path_to_file, filename, destination_path, frontmatter)
         embedded_files.extend(embedded_files_in_note)
-    print(non_md_meta.get('nonMdFiles'))
     nonMdFiles = non_md_meta.get('nonMdFiles') or []
     for file_entry in nonMdFiles:
         if file_entry.get('name') in embedded_files:
@@ -136,7 +135,6 @@ def move_public_files_from_vault_to_blog(vault_path: str, destination_path: str,
     non_md_metadata = read_json(f'{metadata_path}/allExceptMd.json')
     metadata = read_json(f'{metadata_path}/metadata.json')
     public_resources = filter_by_classification_and_path(metadata, path='03_RESOURCES', classification='public')
-    print(public_resources)
     copy_notes_and_linked_assets(vault_path, public_resources, destination_path, non_md_meta=non_md_metadata)
 
 
