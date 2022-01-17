@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 gitpython = "*"
 frontmatter = "*"
+pytest = "*"
+pytest-cov = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

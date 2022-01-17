@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "name": "",
+      "relativePath": "/"
+    },
+    {
+      "name": "02_AREAS",
+      "relativePath": "02_AREAS"
+    },
+    {
+      "name": "03_RESOURCES",
+      "relativePath": "03_RESOURCES"
+    },
+    {
+      "name": "files",
+      "relativePath": "files"
+    }
+  ],
+  "nonMdFiles": [
+    {
+      "name": "netlify-blog-setup.png",
+      "basename": "netlify-blog-setup",
+      "relativePath": "files/netlify-blog-setup.png"
+    }
+  ]
+}

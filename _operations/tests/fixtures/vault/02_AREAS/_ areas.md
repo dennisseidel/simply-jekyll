@@ -1,0 +1,6 @@
+- [[area 1]]
+	- key result
+	- habits
+- [[area 2]]
+	- key results
+	- habits

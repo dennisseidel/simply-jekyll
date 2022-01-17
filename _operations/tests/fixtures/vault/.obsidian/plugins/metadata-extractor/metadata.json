@@ -1,0 +1,226 @@
+[
+  {
+    "fileName": "public_resources",
+    "relativePath": "03_RESOURCES/public_resources.md",
+    "tags": [
+      "type/howto",
+      "computerscience",
+      "operationalexcellence"
+    ],
+    "frontmatter": {
+      "season": "spring",
+      "classification": "public",
+      "title": "how to create a public blog based on obsidian notes",
+      "TARGET DECK": "computerscience",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 202
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "Setup",
+        "level": 2
+      },
+      {
+        "heading": "Prerequesits",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "Post / Note Integration",
+        "level": 2
+      },
+      {
+        "heading": "Run locally",
+        "level": 2
+      },
+      {
+        "heading": "Publication",
+        "level": 2
+      },
+      {
+        "heading": "Footnotes & Resources",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "setup your work environment"
+      },
+      {
+        "link": "setup a python development environment"
+      }
+    ]
+  },
+  {
+    "fileName": "nonpublic_resource",
+    "relativePath": "03_RESOURCES/nonpublic_resource.md",
+    "tags": [
+      "type/howto",
+      "computerscience",
+      "operationalexcellence"
+    ],
+    "frontmatter": {
+      "season": "spring",
+      "classification": "private",
+      "title": "how to create a public blog based on obsidian notes",
+      "TARGET DECK": "computerscience",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 203
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "Setup",
+        "level": 2
+      },
+      {
+        "heading": "Prerequesits",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "Post / Note Integration",
+        "level": 2
+      },
+      {
+        "heading": "Run locally",
+        "level": 2
+      },
+      {
+        "heading": "Publication",
+        "level": 2
+      },
+      {
+        "heading": "Footnotes & Resources",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "setup your work environment"
+      },
+      {
+        "link": "setup a python development environment"
+      }
+    ]
+  },
+  {
+    "fileName": "test",
+    "relativePath": "02_AREAS/test.md",
+    "tags": [
+      "xxx/project",
+      "zzz"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 31
+        }
+      }
+    }
+  },
+  {
+    "fileName": "public_area",
+    "relativePath": "02_AREAS/public_area.md",
+    "frontmatter": {
+      "season": "spring",
+      "classification": "public",
+      "title": "how to create a public blog based on obsidian notes",
+      "TARGET DECK": "computerscience",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 202
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "Setup",
+        "level": 2
+      },
+      {
+        "heading": "Prerequesits",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "Post / Note Integration",
+        "level": 2
+      },
+      {
+        "heading": "Run locally",
+        "level": 2
+      },
+      {
+        "heading": "Publication",
+        "level": 2
+      },
+      {
+        "heading": "Footnotes & Resources",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "setup your work environment"
+      },
+      {
+        "link": "setup a python development environment"
+      }
+    ]
+  },
+  {
+    "fileName": "_ areas",
+    "relativePath": "02_AREAS/_ areas.md",
+    "links": [
+      {
+        "link": "area 1"
+      },
+      {
+        "link": "area 2"
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "tag": "type/howto",
+    "tagCount": 3,
+    "relativePaths": [
+      "03_RESOURCES/public_resources.md",
+      "03_RESOURCES/nonpublic_resource.md",
+      "02_AREAS/public_area.md"
+    ]
+  },
+  {
+    "tag": "computerscience",
+    "tagCount": 3,
+    "relativePaths": [
+      "03_RESOURCES/public_resources.md",
+      "03_RESOURCES/nonpublic_resource.md",
+      "02_AREAS/public_area.md"
+    ]
+  },
+  {
+    "tag": "operationalexcellence",
+    "tagCount": 3,
+    "relativePaths": [
+      "03_RESOURCES/public_resources.md",
+      "03_RESOURCES/nonpublic_resource.md",
+      "02_AREAS/public_area.md"
+    ]
+  },
+  {
+    "tag": "xxx/project",
+    "tagCount": 1,
+    "relativePaths": [
+      "02_AREAS/test.md"
+    ]
+  },
+  {
+    "tag": "zzz",
+    "tagCount": 1,
+    "relativePaths": [
+      "02_AREAS/test.md"
+    ]
+  }
+]
